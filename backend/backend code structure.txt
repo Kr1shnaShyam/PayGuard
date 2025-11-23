@@ -1,0 +1,27 @@
+backend/
+│ package.json
+│ tsconfig.json
+│ .env 
+│
+└───src/
+    │ index.ts
+    │
+    ├──controllers/   (empty for now)
+    ├──models/
+    │    user.model.ts
+    │    transactions.model.ts
+    │
+    ├──services/
+    │    payment.service.ts
+    │
+    ├──routes/
+    │    auth.routes.ts
+    │    tx.routes.ts
+    │
+    ├──middlewares/
+    │    auth.middleware.ts
+    │
+    ├──scripts/
+    │    seed.ts
+    │
+    └──utils/   (optional for later)

@@ -1,0 +1,9 @@
+/* basic resets */
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #0f0f0f;
+  color: #eee;
+}
+a { color: #61dafb; text-decoration: none; }
+input, button { font: inherit; }
