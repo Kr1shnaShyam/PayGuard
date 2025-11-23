@@ -1,4 +1,35 @@
-*.env
-*.txts
+# *.env
+# *.txts
+# node_modules/
+# dist/
+# Node modules
 node_modules/
+**/node_modules/
+
+# Environment files
+.env
+**/.env
+
+# Vite, build, logs
 dist/
+build/
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Docker compose (exclude compose files if you don't want them in repo)
+docker-compose.yml
+docker-compose.*.yml
+
+# Optional: ignore local secrets
+secrets.*
