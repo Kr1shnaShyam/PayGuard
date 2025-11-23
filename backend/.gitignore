@@ -1,2 +1,4 @@
 *.env
 *.txts
+node_modules/
+dist/
