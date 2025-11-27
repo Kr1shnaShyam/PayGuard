@@ -20,13 +20,23 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import App from "./App";
-import "./index.css";
+import "./styles/index.css";
+import { getToken } from "./lib/auth";
+import { setAuthToken } from "./lib/api";
+
+const queryClient = new QueryClient();
+
+const token = getToken();
+if (token) setAuthToken(token);
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </QueryClientProvider>
   </React.StrictMode>
 );

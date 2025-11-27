@@ -16,18 +16,19 @@
 // Utilities for storing token and wiring it into the API instance
 // Exports: saveToken, getToken, removeToken, setAuthToken, parseJwt
 
-const TOKEN_KEY = "token";
-
 export function saveToken(token: string) {
-  if (typeof window !== "undefined") localStorage.setItem(TOKEN_KEY, token);
+  if (typeof window === "undefined") return;
+  localStorage.setItem("token", token);
 }
 
 export function getToken(): string | null {
   if (typeof window === "undefined") return null;
-  return localStorage.getItem(TOKEN_KEY);
+  return localStorage.getItem("token");
 }
 
-export function clearToken() {
-  if (typeof window !== "undefined") localStorage.removeItem(TOKEN_KEY);
+export function removeToken() {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem("token");
 }
+
 
